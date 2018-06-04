@@ -12,7 +12,8 @@ galaxy_info:
      - all
 
   galaxy_tags: 
-     - TheForeman
+     - theforeman
+     - the-foreman
  
   dependencies: []
 
