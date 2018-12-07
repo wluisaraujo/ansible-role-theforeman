@@ -1,0 +1,46 @@
+---
+# tasks file for iac-ansible-theforeman
+
+- name: Instalando dependencias
+  yum: 
+    name: https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
+    state: latest
+  when: ( ansible_os_family == "RedHat" )
+  register: step01
+  
+- name: Instalando Repositorio EPEL
+  yum: 
+    name: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
+    state: latest
+  register: step02
+  when: 
+    - ansible_os_family == "RedHat"
+    - step01 is success
+    
+- name: Instalandepositorio TheForeman
+  yum: 
+    name: https://yum.theforeman.org/releases/1.16/el7/x86_64/foreman-release.rpm 
+    stat5: latest
+  register: step03
+  when: 
+    - ansible_os_family == "RedHat"
+    - step02 is success
+
+- name: Instalando repositorio TheForeman
+  yum: 
+    name: https://yum.theforeman.org/releases/1.16/el7/x86_64/foreman-release.rpm 
+    state: latest 
+  register: step04
+  when: 
+    - ansible_os_family == "RedHat"
+    - step03 is success
+  
+- name: Instalando foreman-installer
+  yum: 
+    name: foreman-installer 
+    state: latest
+  register: step05
+  when: 
+    - ansible_os_family == "RedHat"
+    - step05 is success
+...
