@@ -10,7 +10,7 @@
   register: step01
   when: 
     - ansible_os_family == "Debian"
-    - step01 is success  
+ 
 #
 #- get_url: "{{ ansible_distribution_release }}"
 #    url: https://apt.puppetlabs.com/puppet5-release-{{ ansible_distribution_release }}.deb
