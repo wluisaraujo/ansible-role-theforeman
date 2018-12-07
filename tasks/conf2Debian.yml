@@ -1,0 +1,60 @@
+---
+# tasks file for iac-ansible-theforeman
+- name: Instalar Dependencias
+  apt: 
+    name: "{{ item }}" 
+    update_cache: yes 
+    state: present
+  with_items: 
+    - ca-certificates
+  register: step01
+  when: 
+    - ansible_os_family == "Debian"
+    - step01 is success  
+
+- get_url: "{{ ansible_distribution_release }}"
+    url: https://apt.puppetlabs.com/puppet5-release-{{ ansible_distribution_release }}.deb
+    dest: /tmp/puppet5-release-{{ ansible_distribution_release }}.deb
+  register: step02 
+  when: 
+    - ansible_os_family == "Debian"
+    - step01 is success
+
+- apt:
+    deb: /tmp/puppet5-release-{{ ansible_distribution_release }}.deb
+  register: step03
+  when: 
+    - ansible_os_family == "Debian"
+    - step02 is success
+   
+- apt_repository:
+        repo:  "deb http://deb.theforeman.org/ {{ ansible_distribution_release }} 1.16"
+        state: present
+  register: step04 
+  when: 
+    - ansible_os_family == "Debian"
+    - step03 is success
+    
+- apt_repository:
+        repo: "deb http://deb.theforeman.org/ plugins 1.16"
+        state: present
+  register: step05 
+  when: 
+    - ansible_os_family == "Debian"
+    - step04 is success      
+
+- apt_key: 
+  url: "https://deb.theforeman.org/pubkey.gpg"
+  state: present
+  register: step06 
+  when: 
+    - ansible_os_family == "Debian"
+    - step05 is success
+
+- name: Instalando Docker
+  apt: name=foreman-installer update_cache=yes state=latest
+  register: step07 
+  when: 
+    - ansible_os_family == "Debian"
+    - step07 is success
+...
