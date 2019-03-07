@@ -1,10 +1,11 @@
 [![Build Status](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman.svg?branch=master)](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman)
 ---
-# IaC: with[Ansible](https://www.ansible) role to install and configure [Foreman](https://www.theforeman.org/)
+# IaC: with[Ansible](https://www.ansible.com) role to install and configure [Foreman](https://www.theforeman.org/)
 ------------
 
 Description
 ------------
+
  *
 
 Requirements
@@ -31,6 +32,7 @@ Example Playbook
     - name: value
   roles:
     - iac-ansible-theforeman
+...    
 ```
 
 License
