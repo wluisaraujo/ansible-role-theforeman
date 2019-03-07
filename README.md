@@ -1,8 +1,7 @@
 [![Build Status](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman.svg?branch=master)](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman)
 ---
 # IaC: with[Ansible](https://www.ansible) role to install and configure [Foreman](https://www.theforeman.org/)
-
-================
+------------
 
 Description
 ------------
