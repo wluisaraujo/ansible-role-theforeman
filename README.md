@@ -1,4 +1,4 @@
-[![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-The%20SForeman-blue.svg)](https://galaxy.ansible.com/wluisaraujo/iac-ansible-theforeman) [![Build Status](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman.svg?branch=master)](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman)
+[![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-The%20Foreman-blue.svg)](https://galaxy.ansible.com/wluisaraujo/iac-ansible-theforeman) [![Build Status](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman.svg?branch=master)](https://travis-ci.org/wluisaraujo/iac-ansible-theforeman)
 
 ---
 # IaC: with[Ansible](https://www.ansible.com) role to install and configure [Foreman](https://www.theforeman.org/)
