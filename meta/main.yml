@@ -1,11 +1,11 @@
 galaxy_info:
-  role_name: iac-ansible-theforeman
+  role_name: theforeman
   author: w.luis.araujo
-  description: Install The Foreman
-  company: LUSAR | wluisaraujo.github.io
-  license: license (GPLv3)
+  description: "Infrastructure as Code (IaC) with Ansible role for Install The Foreman"
+  company: "LUSAR | wluisaraujo.github.io"
+  license: "license (GPLv3)"
 
-  min_ansible_version: 2.0
+  min_ansible_version: 2.4
 
   platforms:
    - name: Fedora

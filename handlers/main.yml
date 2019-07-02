@@ -1,6 +1,5 @@
 ---
-# handlers file for iac-ansible-theforeman
-## SystemD
+# handlers file for theforeman
 - name: Start {{ service_name }}
   systemd:
     state: started

@@ -1,4 +1,5 @@
-!.bash*
+# Ignore everything by default.
+#/*!.bash*
 !.config/
 !.config/i3/*
 !.config/i3/config
@@ -16,8 +17,6 @@
 !.zsh/contrib
 !.zsh/contrib/*
 !.zshrc
-# Ignore everything by default.
-#/*
 *.pyc
 *.retry
 */__pycache__

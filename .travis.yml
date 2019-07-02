@@ -13,7 +13,7 @@ services:
 
 env:
   global:
-    - ROLE_NAME: iac-ansible-theforeman
+    - ROLE_NAME: theforeman
     - ANSIBLE_ACTION_WARNINGS: "False"
     - ANSIBLE_COMMAND_WARNINGS: "False"
     - ANSIBLE_DEPRECATION_WARNINGS: "False"
@@ -59,7 +59,7 @@ install:
 
 
  # Install ansible role
- - ansible-galaxy install wluisaraujo.iac-ansible-theforeman
+ - ansible-galaxy install wluisaraujo.theforeman
 
 script:
  # Basic role syntax check
