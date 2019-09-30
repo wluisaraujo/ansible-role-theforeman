@@ -19,6 +19,7 @@ Installation
 
 ```console
 vagrant@localhost:~$ ansible-galaxy install wluisaraujo.theforeman
+vagrant@localhost:~$ ansible-galaxy install -r wluisaraujo.theforeman/requirements.txt
 ```
 
 Role Variables
