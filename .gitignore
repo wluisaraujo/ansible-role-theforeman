@@ -1,5 +1,6 @@
 # Ignore everything by default.
-#/*!.bash*
+#/*
+!.bash*
 !.config/
 !.config/i3/*
 !.config/i3/config
@@ -32,3 +33,5 @@
 .zsh/local
 .zsh/pre-local
 id_rsa
+.vagrant
+.vagrant/*
